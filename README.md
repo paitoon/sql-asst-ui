@@ -1,1 +1,1 @@
-# CEO Assistant UI
+# SQL Assistant UI
