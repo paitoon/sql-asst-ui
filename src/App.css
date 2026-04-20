@@ -1,0 +1,170 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-tap-highlight-color: transparent;
+  background: #0b0f17;
+  color: #e6e6e6;
+  overscroll-behavior-y: contain;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  padding: 0;
+  text-align: initial;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button,
+textarea,
+input,
+select {
+  font: inherit;
+}
+
+/* Smooth mobile scrolling */
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Blink text */
+.blink-text {
+  margin-bottom: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.9;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+/* Markdown */
+.markdown-content {
+  color: #e6e6e6;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.markdown-content > :first-child {
+  margin-top: 0;
+}
+
+.markdown-content > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-content p,
+.markdown-content li,
+.markdown-content span,
+.markdown-content strong,
+.markdown-content em,
+.markdown-content blockquote,
+.markdown-content code,
+.markdown-content pre,
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  color: inherit;
+}
+
+.markdown-content pre {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 12px;
+  overflow-x: auto;
+}
+
+.markdown-content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  overflow-x: auto;
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-content a {
+  color: #9aa7ff;
+}
+
+/* Optional nicer scrollbar for desktop/webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .markdown-content pre {
+    font-size: 13px;
+  }
+}
